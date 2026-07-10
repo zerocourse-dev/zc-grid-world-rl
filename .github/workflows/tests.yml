@@ -11,7 +11,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Run tests
-        run: pytest --tb=short --json-report --json-report-file=test-results.json || true
+        run: pytest --tb=short --json-report --json-report-file=test-results.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
